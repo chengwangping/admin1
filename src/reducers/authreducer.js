@@ -1,7 +1,7 @@
 import { SIGN_IN_SUCCESS, SIGN_OUT_SUCCESS } from '../actions/type'
 
 const initialState = {
-  isAuthenticated: false,
+  isAuthenticated: true,
   user: null
 }
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { ConnectedRouter } from 'connected-react-router'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom' // HashRouter
 import { connect } from 'react-redux'
 import Routes from './routes'
 
@@ -9,7 +9,7 @@ const App = ({ history, isAuthenticated }) => {
   const childProps = {
     isAuthenticated: isAuthenticated
   }
-
+  console.log(childProps)
   return (
     <ConnectedRouter history={history}>
       <BrowserRouter>

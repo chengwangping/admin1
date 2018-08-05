@@ -48,14 +48,14 @@ service.interceptors.response.use(
   response => {
     const res = response.data
     if (res.code === '207') {
-      message.error(res.message) //用户不存在
+      message.error(res.message) // 用户不存在
       return Promise.reject(res.message)
     }
     if (res.code === '208') {
-      message.success(res.message) //登录成功
+      message.success(res.message) // 登录成功
     }
     if (res.code === '209') {
-      message.success(res.message) //退出成功
+      message.success(res.message) // 退出成功
     }
     return response
   },
@@ -64,5 +64,4 @@ service.interceptors.response.use(
     return Promise.reject(error)
   }
 )
-
 export default service
