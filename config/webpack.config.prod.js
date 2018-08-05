@@ -11,6 +11,7 @@ const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const eslintFormatter = require('react-dev-utils/eslintFormatter');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const paths = require('./paths');
+const theme = require('../theme');
 const getClientEnvironment = require('./env');
 
 // Webpack uses `publicPath` to determine where the app is being served from.
@@ -246,7 +247,10 @@ module.exports = {
                 }
               },
               {
-                loader: require.resolve('less-loader') // compiles Less to CSS
+                loader: require.resolve('less-loader'), // compiles Less to CSS
+                options: {
+                  modifyVars: theme,
+                }
               }
             ]
           },
@@ -322,9 +326,7 @@ module.exports = {
       sourceMap: false
     }),
     // Note: this won't work without ExtractTextPlugin.extract(..) in `loaders`.
-    new ExtractTextPlugin({
-      filename: cssFilename
-    }),
+    new ExtractTextPlugin(cssFilename),
     // Generate a manifest file which contains a mapping of all asset filenames
     // to their corresponding output file so that tools can pick it up without
     // having to parse `index.html`.

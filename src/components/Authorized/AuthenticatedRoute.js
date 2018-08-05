@@ -9,12 +9,11 @@ export default({
   <Route
     {...rest}
     render={Props => props.isAuthenticated
-    ? (<Component {...Props} {...props}/>)
-    : (<Redirect
-      to={{
-      pathname: '/login',
-      state: {
-        from: Props.location
-      }
-    }}/>)}/>
+      ? (<Component {...Props} {...props}/>)
+      : (<Redirect to={{
+        pathname: '/login',
+        state: {
+          from: Props.location
+        }
+      }} />)}/>
 )

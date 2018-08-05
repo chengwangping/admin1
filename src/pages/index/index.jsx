@@ -1,7 +1,7 @@
-import React from 'react';
-import {Row, Col, Card, Icon} from 'antd';
-import LineEcharts from '../../components/echarts/line';
-import './index.less';
+import React from 'react'
+import {Row, Col, Card, Icon} from 'antd'
+import LineEcharts from '../../components/echarts/line'
+import './index.less'
 class HomeIndex extends React.Component {
   state = {
     loading: false,
@@ -116,4 +116,4 @@ class HomeIndex extends React.Component {
   }
 }
 
-export default HomeIndex;
+export default HomeIndex

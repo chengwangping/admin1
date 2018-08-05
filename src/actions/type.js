@@ -1,6 +1,5 @@
-export const SIGN_IN_SUCCESS = "SIGN_IN_SUCCESS";
-export const SIGN_OUT_SUCCESS = "SIGN_OUT_SUCCESS ";
+export const SIGN_IN_SUCCESS = 'SIGN_IN_SUCCESS'
+export const SIGN_OUT_SUCCESS = 'SIGN_OUT_SUCCESS'
 
-export const REQUEST_DATA = 'REQUEST_DATA';
-export const RECEIVE_DATA = 'RECEIVE_DATA';
-
+export const REQUEST_DATA = 'REQUEST_DATA'
+export const RECEIVE_DATA = 'RECEIVE_DATA'
